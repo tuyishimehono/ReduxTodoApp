@@ -1,4 +1,3 @@
-// import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setInputValue,
@@ -56,6 +55,7 @@ function App() {
         {todos.map((todo) => (
           <Item
             key={todo.id}
+            id={todo.id}
             todoText={todo.text}
             completed={todo.completed}
             delete={() => handleDeleteTodo(todo.id)}
