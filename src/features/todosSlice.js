@@ -6,7 +6,6 @@ const todosSlice = createSlice({
         todos: JSON.parse(localStorage.getItem('todos')) || [],
         inputValue: "",
     },
-
     reducers: {
         setInputValue(state, action) {
             state.inputValue = action.payload
@@ -37,5 +36,4 @@ const todosSlice = createSlice({
 });
 
 export const { setInputValue, addTodo, toggleTodo, deleteTodo } = todosSlice.actions;
-
 export default todosSlice.reducer;
